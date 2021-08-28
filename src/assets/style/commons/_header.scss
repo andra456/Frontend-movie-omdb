@@ -1,0 +1,195 @@
+
+.top-head-menu {
+    z-index: 200;
+    display: flex;
+    background: #fff;
+    align-items: center;
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 400ms ease-in-out;
+    -moz-transition: all 400ms ease-in-out;
+    -ms-transition: all 400ms ease-in-out;
+    -o-transition: all 400ms ease-in-out;
+    transition: all 400ms ease-in-out;
+    
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $pattern_white;
+        -webkit-box-shadow: 0 0 1px 1px rgba(0,0,0,0.12);
+            box-shadow: 0 0 1px 1px rgba(0,0,0,0.12);
+        
+    }
+    .spare-menu {
+        display: flex;
+        justify-content: space-between;
+    }
+    .ui.action.fluid {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        height: 42px;
+        max-width: 400px;
+        > input {
+            background: #f1f3f4;
+            border-radius: 0 10px 10px 0;
+            display: flex;
+            width: 100%;
+            height: 42px;
+            border: 0px;
+            padding-left: 10px;
+            position: relative;
+            white-space: nowrap;
+        }
+        svg {
+            display: block;
+            width: 60px;
+            height: 100%;
+            padding: 10px;
+            background: #f1f3f4;
+            border-radius: 10px 0 0 10px;
+            color: #8a8888;
+        }
+    }
+    .menu-mobile {
+        display: none;
+        border: 0px;
+        padding: 5px;
+        height: 38px;
+        width: 38px;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        border-radius: 5px;
+        /*
+        -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,.12);
+        box-shadow: 0 0 5px 0 rgba(0,0,0,.12);
+        */
+    }
+    &.fixed_top {
+        position: fixed;
+        height: 60px;
+        
+       
+        &:before {
+            
+            background:$pattern_white;
+            height: 100%;
+            -webkit-box-shadow: 0 0 6px 1px rgba(0,0,0,.15);
+            box-shadow: 0 0 6px 1px rgba(0,0,0,.15);
+        }
+        ul li a {
+            animation: fadeIn; 
+            animation-duration: 800ms; 
+            color: $black;
+        }
+        
+    }
+    .logo {
+        width: 242px;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        a { 
+            padding-left: 15px;  
+            max-height: 28px;
+
+            .wide { display: block; }
+            .mobile { display: none; }
+        }
+        svg {
+            height: 28px;
+        }
+    }
+    
+    nav {
+        display: flex;
+        margin: 0;
+        padding: 0;
+
+        .selected-pointer{
+            display: none;
+        }
+
+        
+        ul {
+            display: flex;
+            align-items :center;
+        > li {
+            display: block;
+            margin-left: 16px;
+            &.head_nav {
+                display: none;
+            }
+            a {
+            text-decoration: none;
+            font-size: 16px;
+            color: $gray;
+            -webkit-transition: all 200ms ease-in-out;
+            -moz-transition: all 200ms ease-in-out;
+            -ms-transition: all 200ms ease-in-out;
+            -o-transition: all 200ms ease-in-out;
+            transition: all 200ms ease-in-out;
+            }
+        }
+        
+    }
+    }
+    .flex-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        z-index: 2;
+    }
+
+
+}
+.body-content {
+    padding-top: 70px;
+    padding-left: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+@media only screen and (max-width: 48em) {
+    .top-head-menu {
+       .flex-menu{
+        width: 100%;
+        right: 0;
+       }
+       .ui.action.fluid  {
+        max-width: calc(100% - 120px);
+        margin-left: 60px;
+       }
+       a {
+        padding-left: 0px !important;
+       }
+        .logo {
+            display: flex;
+            align-items: center;
+            width: calc( 100% - 120px );
+            svg {
+                width: 100%;
+            }
+            svg.wide { display: none; }
+            svg.mobile { display: block; }
+        }
+    }
+}
+
+
+
+
