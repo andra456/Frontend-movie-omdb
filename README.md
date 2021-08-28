@@ -16,6 +16,7 @@ Copy folder to preapre instalation
 Install Depedencies
 
 ```shell
+$ git clone https://github.com/andra456/Frontend-movie-omdb.git
 $ cd [folder]
 $ yarn install
 
