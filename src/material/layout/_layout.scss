@@ -1,0 +1,41 @@
+
+.panel-menu {
+    align-content: space-between;
+    background-color: #fff;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 60px;
+    transition: width .15s cubic-bezier(0.4,0.0,0.2,1);
+    z-index: 100;
+    flex-direction: column;
+    min-height: 600px;
+   border-right: solid 1px rgba(0,0,0,.1);
+    box-shadow: 2px 0 6px 0 rgba(0,0,0,.04);
+    padding-top: 10px;
+    .leading-panel {
+        margin: 30px 20px 10px;
+        padding: 10px 0;
+        border-bottom: solid 1px #eee;
+    }
+}
+
+.float-content {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.scroll {
+        width: calc(100% + 17px);
+        height: 100%;
+         overflow-y: scroll;
+         overflow-x: hidden;
+        padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
+        box-sizing: content-box;
+    
+}
