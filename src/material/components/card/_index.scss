@@ -1,0 +1,10 @@
+.box-photo-card {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:relative;
+    border-radius: 5px;
+      box-shadow: 0 -5px 10px 0 rgba(65, 69, 73, .02), 
+                  0px 1px 1px 0px rgba(65, 69, 73, .3), 
+                  0px 1px 3px 1px rgba(65, 69, 73, .15);
+}
