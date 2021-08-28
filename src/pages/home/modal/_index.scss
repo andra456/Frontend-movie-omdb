@@ -1,0 +1,146 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    z-index: 777;
+    width: 100%;
+    background: rgba(95, 95, 95, 0.69);
+    height: 100%;
+    left: 0;
+    animation: fadeIn 500ms;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    &.show {
+        display: flex;
+    }
+}
+
+.modal-movie-card {
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    max-width: 585px;
+    
+    border-radius: 4px;
+    box-shadow: 2px 3px 12px rgba(0, 0, 0, .4);
+    color: rgb(70, 70, 70);
+    padding: 2vh 3%;
+    background-color: rgb(255, 255, 255);
+   
+    .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        filter: blur(20px);
+    }
+    .close {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      z-index: 22;
+      right: 10px;
+      cursor: pointer;
+      background: #fff;
+      padding: 5px;
+      border-radius: 26px;
+      top: 10px;
+      opacity: .5;
+    }
+    .main-modal{
+        position: relative;
+        z-index: 2;
+        .poster {
+            border-radius: 5px;
+            border: solid 2px rgba(115, 115, 115, 0.3);
+            max-height: 197px;
+        }
+    }
+  &:after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    
+    z-index: 0;
+  }
+  i {
+    font-size: .7em;
+    color: #ff5b84;
+  }
+  h1 {
+    font-size: 170%;
+    position: relative;
+    z-index: 10;
+  }
+  span {
+    position: relative;
+    z-index: 10;
+    margin-right: 80px;
+    color: rgb(210, 210, 210);
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+    a {
+      margin-left: 10px;
+    }
+  }
+  .watch {
+    display: block;
+    border: 1px solid white;
+    border-radius: 4px;
+    position: relative;
+    z-index: 10;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    background: rgba(0, 0, 0, .3);
+    margin: 10px 0px;
+    outline: none;
+    
+    transition: all .2s;
+  }
+  button:hover {
+    background: rgba(255, 255, 255, .8);
+    color: black;
+   border: solid 1px #eee;
+    mix-blend-mode: screen;
+  }
+  button:active {
+    transform: translateY(2px);
+  }
+  p {
+    position: relative;
+    z-index: 10;
+    font-size: .8em;
+    line-height: 1.5;
+    padding-top: 10px;
+  }
+}
+  @media (max-width: 768px) {
+
+    .modal-movie-card {
+      width: 75%;
+      h1 {
+        font-size: 120%;
+        }
+        
+    }
+ 
+    .watch {
+      margin: 5% auto;
+    }
+  }
+  @media (max-width: 500px) {
+    .modal-movie-card {
+      width: 90%;
+    }
+  }
