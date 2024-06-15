@@ -2,9 +2,9 @@
 
     p {
         line-height: 1.5;
-        color: #303030;
+        color: #afaeae;
         padding: 7px 0;
-        border-bottom: solid 1px #e3e3e3;
+        border-bottom: solid 1px #212121;
         font-size: 14px;
     }
     span {
@@ -19,15 +19,13 @@
         color: #fff;
     }
     h1 {
-        color: #535353;
+        color: yellow;
         padding-bottom: 20px;
     }
 }
 .movie-show {
-    background: #eee;
+    background: #0c0c0c;
     border-radius: 10px;
     margin-top: 20px;
     padding: 20px;
-    border: solid 1px rgba(0, 0, 0, 0.1);
-    box-shadow: 2px 0 6px 0 rgba(0, 0, 0, .04);
 }
