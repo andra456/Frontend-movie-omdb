@@ -1,5 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,200,500,700);
-
 /* reset -------------------------- */
 html,
 body,
@@ -42,6 +40,7 @@ video {
     margin: 0;
     padding: 0;
 }
+
 h1,
 h2,
 h3,
@@ -60,28 +59,34 @@ del {
     font-weight: normal;
     font-style: normal;
 }
+
 ul,
 ol {
     list-style: none;
 }
+
 fieldset,
 img {
     border: none;
 }
+
 caption,
 th {
     text-align: left;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
 input[type="button"],
 input[type="submit"],
 input[type="reset"],
 button {
     cursor: pointer;
 }
+
 input[type="button"],
 input[type="submit"],
 input[type="reset"],
@@ -97,30 +102,36 @@ textarea {
     -ms-appearance: none;
     appearance: none;
 }
+
 input,
 button,
 textarea {
     line-height: normal;
     font-family: $fontFamily;
 }
+
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
+
 button::-moz-focus-inner,
 input::-moz-focus-inner {
     border: 0;
     padding: 0;
 }
+
 input[type="hidden"],
 [hidden],
 .hidden {
     display: none;
 }
+
 textarea {
     overflow: auto;
     resize: none;
 }
+
 article,
 aside,
 details,
@@ -133,36 +144,44 @@ section,
 .clearfix {
     display: block;
 }
+
 audio,
 canvas,
 video {
     display: inline-block;
 }
-a > img {
+
+a>img {
     vertical-align: bottom;
 }
+
 strong,
 .strong,
 b {
     font-weight: bold;
 }
+
 em,
 .italic,
 i {
     font-style: italic;
 }
+
 del,
 .del {
     text-decoration: line-through;
 }
+
 :focus {
     outline: none;
 }
+
 img {
     max-width: 100%;
     width: auto;
     height: auto;
 }
+
 /* tools -------------------------- */
 .clear {
     clear: both;
@@ -171,6 +190,7 @@ img {
     height: 0;
     font-size: 0;
 }
+
 .clearfix:after,
 .wrap:after,
 .spanning:after,
@@ -188,12 +208,15 @@ article:after,
     height: 0;
     font-size: 0;
 }
+
 .align-left {
     float: left !important;
 }
+
 .align-right {
     float: right !important;
 }
+
 .overflow-hidden {
     overflow: hidden;
     display: block;
