@@ -4,11 +4,13 @@ $timing: 10s;
 
 .page-center {
 	color: #6D6D6D;
+
 	h1 {
 		color: #fff;
 		font-size: 50px;
 	}
-	a {
+
+	.manage-profile {
 		padding: 5px 15px;
 		color: #6D6D6D;
 		font-size: 17px;
@@ -16,11 +18,13 @@ $timing: 10s;
 		text-transform: uppercase;
 		border: 1px solid #6D6D6D;
 		transition: all 300ms ease;
+
 		&:hover {
-			color:  $white;
+			color: $white;
 			border: 1px solid $white;
 		}
 	}
+
 	opacity: 0;
 	animation: fade-in 500ms ease 200ms 1 forwards;
 }
@@ -30,6 +34,7 @@ $timing: 10s;
 		opacity: 0;
 		transform: scale(1.2);
 	}
+
 	100% {
 		opacity: 1;
 		transform: scale(1);
@@ -38,13 +43,13 @@ $timing: 10s;
 
 .page-center {
 	display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
 }
 
 .bg-wrapper {
@@ -53,9 +58,9 @@ $timing: 10s;
 
 .profile {
 	width: 11vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
 	&-wrap {
 		display: flex;
@@ -63,37 +68,40 @@ $timing: 10s;
 		max-width: 800px;
 		margin: 50px auto;
 	}
-	
+
 	&-icon {
 		width: calc(100% - 40px);
-    	padding-bottom: 80%;
+		padding-bottom: 80%;
 		position: relative;
-		
+
 		svg {
 			position: absolute;
 			transition: all 300ms ease;
-			left : 0;
+			left: 0;
 			width: 100%;
-			-webkit-box-shadow: 0 0 0 6px rgba(225,225,225,.2);
-			box-shadow: 0 0 0 6px rgba(225,225,225,.2);
+			-webkit-box-shadow: 0 0 0 6px rgba(225, 225, 225, .2);
+			box-shadow: 0 0 0 6px rgba(225, 225, 225, .2);
 			border-radius: 3px;
 		}
 	}
+
 	&-name {
 		margin: 20px 0;
 		line-height: 1.25em;
 		transition: all 300ms ease;
 	}
+
 	&:hover {
 		&-name {
 			color: $white;
 		}
+
 		svg {
 			-webkit-box-shadow: 0 0 0 6px rgba(255, 255, 255, .8);
 			box-shadow: 0 0 0 6px rgba(255, 255, 255, .8);
 		}
 	}
-	
+
 }
 
 
@@ -103,10 +111,12 @@ $timing: 10s;
 		transform-origin: center 80%;
 		animation: raise $timing ease-in-out infinite;
 	}
+
 	#sunglasses {
 		transform-origin: center 100%;
 		animation: tilt $timing 250ms ease infinite;
 	}
+
 	#mustache {
 		transform-origin: center 90%;
 		animation: mustache $timing 0ms ease infinite;
@@ -117,15 +127,19 @@ $timing: 10s;
 	0% {
 		transform: translateY(0px) rotate(0deg);
 	}
+
 	10% {
 		transform: translateY(-10px) rotate(5deg);
 	}
+
 	20% {
 		transform: translateY(-10px) rotate(5deg);
 	}
+
 	25% {
 		transform: translateY(0px) rotate(0deg);
 	}
+
 	100% {
 		transform: translateY(0px);
 	}
@@ -135,15 +149,19 @@ $timing: 10s;
 	0% {
 		transform: translateY(0px) rotate(0deg);
 	}
+
 	10% {
 		transform: translateY(-2px) rotate(5deg);
 	}
+
 	20% {
 		transform: translateY(-2px) rotate(5deg);
 	}
+
 	25% {
 		transform: translateY(0px) rotate(0deg);
 	}
+
 	100% {
 		transform: translateY(0px);
 	}
@@ -153,26 +171,35 @@ $timing: 10s;
 	20% {
 		transform: translateY(0px) scale(1);
 	}
+
 	30% {
-		transform: translateY(4px)  rotate(-3deg) scale(1.03);
+		transform: translateY(4px) rotate(-3deg) scale(1.03);
 	}
+
 	40% {
 		transform: translateY(0px) scale(1);
 	}
 }
 
 .profile2 {
-	#left-pupil, #right-pupil {
+
+	#left-pupil,
+	#right-pupil {
 		animation: side-to-side $timing ease-in-out infinite alternate;
 	}
-	#left-eye-top, #right-eye-top {
+
+	#left-eye-top,
+	#right-eye-top {
 		transform-origin: center bottom;
 		animation: wide-open $timing ease-in-out infinite alternate;
 	}
-	#bottom-beak, #gillard {
+
+	#bottom-beak,
+	#gillard {
 		transform-origin: center top;
 		animation: chew $timing*2 ease-in-out infinite;
 	}
+
 	#hair {
 		animation: hair 4s ease infinite alternate;
 	}
@@ -182,24 +209,31 @@ $timing: 10s;
 	0% {
 		transform: translateX(0px);
 	}
+
 	5% {
 		transform: translateX(-5px);
 	}
+
 	10% {
 		transform: translateX(-5px);
 	}
+
 	20% {
 		transform: translateX(5px);
 	}
+
 	25% {
 		transform: translateX(5px);
 	}
+
 	35% {
 		transform: translateX(-5px);
 	}
+
 	40% {
 		transform: translateX(-5px);
 	}
+
 	45% {
 		transform: translateX(0px);
 	}
@@ -209,14 +243,17 @@ $timing: 10s;
 	0% {
 		opacity: 0;
 	}
+
 	40% {
 		opacity: 0;
 		transform: scale(1, 0);
 	}
+
 	42% {
 		opacity: 1;
 		transform: scale(1, 1);
 	}
+
 	100% {
 		opacity: 1;
 		transform: scale(1, 1);
@@ -227,39 +264,51 @@ $timing: 10s;
 	0% {
 		transform: translateY(0px) rotate(0deg);
 	}
+
 	2% {
 		transform: translateY(3px) rotate(-3deg);
 	}
+
 	4% {
 		transform: translateY(0px) rotate(0deg);
 	}
+
 	6% {
 		transform: translateY(3px) rotate(-3deg);
 	}
+
 	8% {
 		transform: translateY(0px) rotate(0deg);
 	}
+
 	10% {
 		transform: translateY(3px) rotate(-3deg);
 	}
+
 	12% {
 		transform: translateY(0px) rotate(0deg);
 	}
+
 	14% {
 		transform: translateY(3px) rotate(0deg);
 	}
+
 	18% {
 		transform: translateY(0px) rotate(0deg);
 	}
+
 	26% {
 		transform: translateY(15px);
 	}
+
 	78% {
 		transform: translateY(15px);
 	}
+
 	80% {
 		transform: translateY(0px) rotate(0deg);
 	}
+
 	100% {
 		transform: translateY(0px) rotate(0deg);
 	}
@@ -269,9 +318,11 @@ $timing: 10s;
 	0% {
 		transform: scale(1);
 	}
+
 	50% {
 		transform: scale(1, .8);
 	}
+
 	100% {
 		transform: scale(1);
 	}
@@ -279,7 +330,8 @@ $timing: 10s;
 
 .profile3 {
 	svg {
-		animation: bg-fade $timing ease infinite; 
+		animation: bg-fade $timing ease infinite;
+
 		#smile {
 			width: 100px;
 		}
@@ -290,15 +342,19 @@ $timing: 10s;
 	0% {
 		background: #86A546;
 	}
+
 	40% {
 		background: #86A546;
 	}
+
 	45% {
 		background: #E09927;
 	}
+
 	55% {
 		background: #E09927;
 	}
+
 	60% {
 		background: #86A546;
 	}

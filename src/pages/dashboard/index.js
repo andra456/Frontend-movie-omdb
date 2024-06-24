@@ -89,15 +89,19 @@ function Dashboard(props) {
       }
     }
   }, [content.list_movie]);
-  const handlePlay = () => {};
+  const handlePlay = () => {
+    setmodal({ ...modal, show: true });
+  };
 
   return (
     <Fragment>
-      <PlayerMovies />
-      <Onemotion />
-      {configCarousel.map((e, i) => (
-        <Carousel key={i} {...e} onPlay={handlePlay} />
-      ))}
+      <PlayerMovies {...modal} />
+      <div>
+        <Onemotion />
+        {configCarousel.map((e, i) => (
+          <Carousel key={i} {...e} onPlay={handlePlay} />
+        ))}
+      </div>
     </Fragment>
   );
 }

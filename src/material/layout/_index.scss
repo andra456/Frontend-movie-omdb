@@ -1,0 +1,27 @@
+.nfLoader {
+    font-size: 4vw;
+    color: red;
+    display: flex;
+    aspect-ratio: 1/1;
+    animation: nfLoader-spin .7s cubic-bezier(0.23, 0.52, 0.76, 0.39) infinite, 1 !important;
+
+
+    svg {
+        width: 100%;
+        fill: red;
+        aspect-ratio: 1/1;
+        max-width: 5vw;
+    }
+}
+
+@keyframes nfLoader-spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes nfLoader-spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}

@@ -2,20 +2,29 @@
 
 $heigthBar: 129px;
 $loadbox: 320px;
+
 #current-carousel {
+
+  span.play>svg {
+    margin-left: 4px;
+  }
+
   .carousel.own-mouse {
     position: relative;
     height: 0;
     padding-bottom: 10%;
     margin-bottom: 50px;
+
     &:hover {
       button.btn {
         animation: fadeIn 320ms;
+
         &:disabled {
           svg {
             display: none;
           }
         }
+
         svg {
           visibility: visible;
         }
@@ -53,26 +62,31 @@ $loadbox: 320px;
       }
     }
   }
+
   @media screen and (min-width: 1201px) {
     .carousel.own-mouse {
       padding-bottom: 9%;
     }
   }
+
   @media screen and (max-width: 1200px) {
     .carousel.own-mouse {
       padding-bottom: 14%;
     }
   }
+
   @media screen and (max-width: 768px) {
     .carousel.own-mouse {
       padding-bottom: 19%;
     }
   }
+
   @media screen and (max-width: 468px) {
     .carousel.own-mouse {
       padding-bottom: 29%;
     }
   }
+
   h3.header {
     line-height: 1.25vw;
     font-size: 1.3vw;
@@ -95,10 +109,12 @@ $loadbox: 320px;
       text-transform: uppercase;
     }
   }
+
   ul.genre {
     justify-content: start !important;
     padding-top: 14px;
     margin-bottom: 5px !important;
+
     li {
       color: #fff;
       font-size: 14px;
@@ -112,6 +128,7 @@ $loadbox: 320px;
         font-size: 2vw;
         line-height: 0.4;
       }
+
       &:first-child:before {
         display: none;
       }
@@ -140,6 +157,7 @@ $loadbox: 320px;
       left: 0;
       opacity: 0.2;
     }
+
     .movie-img {
       top: 0;
       left: 0;
@@ -175,11 +193,13 @@ $loadbox: 320px;
         .description {
           display: none;
         }
+
         .list-episode {
           display: none;
         }
       }
     }
+
     .video-trailer {
       position: absolute;
       background: #000;
@@ -204,7 +224,7 @@ $loadbox: 320px;
         transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
         transition-delay: 600ms;
         transition-duration: 300ms;
-        display: none;
+        display: block;
         padding: 10px;
         opacity: 0;
 
@@ -235,14 +255,15 @@ $loadbox: 320px;
           transition-duration: 100ms;
         }
 
-        > ul {
+        >ul {
           transition-property: all;
           transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
           transition-delay: 300ms;
           transition-duration: 100ms;
         }
+
         .genre,
-        > ul,
+        >ul,
         .sort-list {
           opacity: 0;
         }
@@ -264,6 +285,7 @@ $loadbox: 320px;
           padding: 5px;
         }
       }
+
       ul {
         display: flex;
         justify-content: space-between;
@@ -272,8 +294,10 @@ $loadbox: 320px;
         transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
         opacity: 1;
         margin-bottom: 16px;
+
         li {
           display: flex;
+
           span {
             transition-property: all;
             transition-duration: 400ms;
@@ -287,6 +311,7 @@ $loadbox: 320px;
             border: solid 1px #fff6;
             border-radius: 50px;
             margin-right: 5px;
+
             svg {
               width: 15px;
               height: 15px;
@@ -315,13 +340,14 @@ $loadbox: 320px;
         opacity: 1;
         visibility: visible;
         transition-duration: 200ms;
-        transition-delay: 500ms;
+        transition-delay: 800ms;
 
         .beriers {
           display: block;
           opacity: 1;
           transition-delay: 500ms;
           transition-duration: 800ms;
+
           .genre {
             transition-delay: 300ms;
             transition-duration: 500ms;
@@ -332,12 +358,13 @@ $loadbox: 320px;
             transition-duration: 500ms;
           }
 
-          > ul {
+          >ul {
             transition-delay: 100ms;
             transition-duration: 500ms;
           }
+
           .genre,
-          > ul,
+          >ul,
           .sort-list {
             opacity: 1;
           }
@@ -348,6 +375,7 @@ $loadbox: 320px;
         border-radius: 0px;
       }
     }
+
     &.loadbox {
       z-index: 555;
       position: fixed;
@@ -360,6 +388,7 @@ $loadbox: 320px;
       transition: none !important;
       transform: none !important;
       opacity: 1;
+
       .box-body {
         transform: translateX(0px) translateY(-25px);
         position: absolute;
@@ -368,6 +397,7 @@ $loadbox: 320px;
         box-shadow: rgba(0, 0, 0, 0.7) 0px 3px 10px;
         transition-duration: 0ms;
         transition-delay: 0ms;
+
         .close {
           opacity: 0;
         }
@@ -392,6 +422,7 @@ $loadbox: 320px;
           ul {
             opacity: 0.3;
           }
+
           h3 {
             display: block;
           }
@@ -414,7 +445,7 @@ $loadbox: 320px;
       transform: none !important;
       width: 100%;
       height: 100%;
-      margin: 0 !important ;
+      margin: 0 !important;
 
       &::before {
         transform: translateX(0px) translateY(0px);
@@ -426,6 +457,7 @@ $loadbox: 320px;
         animation: fadeIn 800ms;
         display: block;
       }
+
       .close {
         opacity: 1;
       }
@@ -445,9 +477,11 @@ $loadbox: 320px;
           width: calc(100% + 17px);
           height: 100%;
           overflow-y: scroll;
-          padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
+          padding-right: 17px;
+          /* Increase/decrease this value for cross-browser compatibility */
           box-sizing: content-box;
           box-shadow: none;
+
           .child-scrol-bar {
             margin: 50px auto;
             width: calc(100% - 4px);
@@ -472,8 +506,8 @@ $loadbox: 320px;
 
           button.close {
             position: absolute;
-            right: 5px;
-            top: 5px;
+            right: 32px;
+            top: 16px;
             width: 30px;
             height: 30px;
             padding: 7px;
@@ -483,6 +517,7 @@ $loadbox: 320px;
             z-index: 222;
           }
         }
+
         .detail-movie {
           position: relative;
           display: flex;
@@ -493,7 +528,7 @@ $loadbox: 320px;
           background: linear-gradient(to top, #181818, transparent 95%);
 
           .beriers {
-            animation: fadeIn 800ms;
+
             display: flex;
             flex-direction: column-reverse;
             padding: 10px 30px;
@@ -506,6 +541,7 @@ $loadbox: 320px;
               display: block;
               opacity: 1;
             }
+
             ul {
               transition-delay: 1s;
             }
@@ -515,10 +551,12 @@ $loadbox: 320px;
                 width: 111px !important;
                 background: #fff;
               }
+
               &.play svg {
                 fill: #181818;
                 margin-right: 8px;
               }
+
               &.play:after {
                 content: "Putar";
               }
@@ -531,6 +569,7 @@ $loadbox: 320px;
           animation-duration: 4s;
           padding: 10px 30px;
           display: flex;
+
           .dets ul {
             display: flex;
             margin-bottom: 10px;
@@ -556,24 +595,28 @@ $loadbox: 320px;
             margin-bottom: 10px;
             line-height: 1.5;
             color: #b1b1b1;
+
             span {
               color: #fff;
             }
           }
         }
+
         .list-episode {
           display: block;
           padding: 30px;
           animation: fadeIn 500ms;
 
-          > h3 {
+          >h3 {
             font-weight: 700;
             font-size: 24px;
             margin-top: 48px;
             margin-bottom: 20px;
           }
+
           .item {
             margin-bottom: 20px;
+
             .box {
               overflow: hidden;
               box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
@@ -586,10 +629,12 @@ $loadbox: 320px;
                 }
               }
             }
+
             .disc-similar {
               height: 210px;
               padding: 0 10px 10px;
               position: relative;
+
               &:after {
                 content: "";
                 display: block;
@@ -600,10 +645,12 @@ $loadbox: 320px;
                 bottom: 0;
                 left: 0;
               }
+
               p {
                 font-size: 12px;
                 line-height: 1.5;
               }
+
               h3 {
                 font-weight: 700;
                 font-size: 20px;
@@ -624,6 +671,7 @@ $loadbox: 320px;
                     margin-right: 10px;
 
                     border-radius: 5px;
+
                     &.voted {
                       border: solid 1px #000;
                       background: #ffe000;
@@ -631,6 +679,7 @@ $loadbox: 320px;
                       width: 30px;
                       border-radius: 16px;
                     }
+
                     &.lang {
                       text-transform: uppercase;
                       color: #46d369;
@@ -649,24 +698,30 @@ $loadbox: 320px;
       .detail-movie {
         animation: fadeOut 800ms;
       }
+
       .description {
         animation: fadeOut 800ms;
         animation-delay: 200ms;
       }
+
       .movie {
         animation: fadeOut 800ms;
         animation-delay: 100ms;
       }
+
       &::before {
         animation: fadeOut 800ms;
       }
     }
+
     &.hiddenshow {
       transition-property: all;
       visibility: hidden;
+
       .detail-movie {
         display: none !important;
       }
+
       &::before {
         display: none;
       }
@@ -685,6 +740,7 @@ $loadbox: 320px;
       &.loadbox {
         margin-left: 0;
       }
+
       &:hover {
         margin-left: 0;
       }
@@ -692,94 +748,117 @@ $loadbox: 320px;
 
     @media screen and (min-width: 1201px) {
       $widthGrid: 6;
+
       @for $i from 1 to $elements {
         &:nth-child(#{($i * $widthGrid)}) .overlay-grid {
           &:hover {
             margin-left: -100px;
           }
+
           &.loadbox {
             margin-left: 0px;
+
             .box-body {
               margin-left: -100px;
             }
           }
         }
+
         &:nth-child(#{($i * $widthGrid) + 1}) .overlay-grid {
           &:hover {
             margin-left: 0;
           }
+
           &.loadbox {
             margin-left: 0;
           }
         }
       }
     }
+
     @media screen and (max-width: 1200px) {
       $widthGrid: 4;
+
       @for $i from 1 to $elements {
         &:nth-child(#{($i * $widthGrid)}) .overlay-grid {
           &:hover {
             margin-left: -50px;
           }
+
           &.loadbox {
             margin-left: 0px;
+
             .box-body {
               margin-left: -50px;
             }
           }
         }
+
         &:nth-child(#{($i * $widthGrid) + 1}) .overlay-grid {
           &:hover {
             margin-left: 0;
           }
+
           &.loadbox {
             margin-left: 0;
           }
         }
       }
     }
+
     @media screen and (max-width: 768px) {
       $widthGrid: 3;
+
       @for $i from 1 to $elements {
         &:nth-child(#{($i * $widthGrid)}) .overlay-grid {
           &:hover {
             margin-left: -50px;
           }
+
           &.loadbox {
             margin-left: 0px;
+
             .box-body {
               margin-left: -50px;
             }
           }
         }
+
         &:nth-child(#{($i * $widthGrid) + 1}) .overlay-grid {
           &:hover {
             margin-left: 0;
           }
+
           &.loadbox {
             margin-left: 0;
           }
         }
       }
     }
+
     @media screen and (max-width: 468px) {
       $widthGrid: 2;
+
       @for $i from 1 to $elements {
         &:nth-child(#{($i * $widthGrid)}) .overlay-grid {
           &:hover {
             margin-left: -50px;
           }
+
           &.loadbox {
             margin-left: 0px;
+
             .box-body {
               margin-left: -50px;
             }
           }
         }
+
         &:nth-child(#{($i * $widthGrid) + 1}) .overlay-grid {
           &:hover {
             margin-left: 0;
           }
+
           &.loadbox {
             margin-left: 0;
           }
@@ -789,8 +868,10 @@ $loadbox: 320px;
 
     &:last-child(0) .overlay-grid:hover {
       margin-left: -50px;
+
       &.loadbox {
         margin-left: 0px;
+
         .box-body {
           margin-left: -50px;
         }
@@ -807,9 +888,11 @@ $loadbox: 320px;
   from {
     opacity: 1;
   }
+
   70% {
     opacity: 1;
   }
+
   90% {
     opacity: 0;
   }

@@ -48,6 +48,7 @@ function Carousel(props) {
   const [movieDetail, setMovieDetail] = React.useState(null);
   const [expanse, setexpanse] = React.useState(defExpanse);
   const [pages, setpage] = React.useState(initdefPage);
+  const [isShow, setIsShow] = React.useState(false);
 
   const [styleGrid, setstyleGrid] = React.useState(defGrid);
 
@@ -95,8 +96,6 @@ function Carousel(props) {
 
     let sheet = (documentWidth * index - 10 * index) * -1;
     let endDiff = (fullwidht - documentWidth + 10) * -1;
-    // let m = styleGrid.marginRight;
-    // let indct = diff >= tempGrid ? sheet: diff
 
     let c = d.length > 1 ? Number(d[0]) : Number(d[0]) - 1;
 
@@ -121,7 +120,7 @@ function Carousel(props) {
     };
 
     setexpanse(def);
-
+    setIsShow(false);
     setTimeout(() => {
       setexpanse({
         ...def,
@@ -137,6 +136,9 @@ function Carousel(props) {
       setTimeout(() => {
         detail({ id: e.id, append_to_response: "videos,images" });
         GetSimilar({ id: e.id });
+        setTimeout(() => {
+          setIsShow(true);
+        }, 9000);
       }, 200);
     }
   };
@@ -333,34 +335,9 @@ function Carousel(props) {
     return { top, left, width };
   };
   function trans(id) {
-    console.log(content.genres_movie);
     const genre = _.find(content.genres_movie, { id: id });
     return genre ? genre.name : "";
   }
-
-  const [isHovered, setIsHovered] = React.useState("");
-  const [showVideo, setShowVideo] = React.useState(false);
-
-  let hoverTimeout;
-
-  const handleMouseOver = (id) => {
-    setIsHovered(id);
-    hoverTimeout = setTimeout(() => {
-      setShowVideo(true);
-    }, 4000); // 1.2 seconds delay
-  };
-
-  const handleMouseOut = () => {
-    setIsHovered("");
-    clearTimeout(hoverTimeout);
-    setShowVideo(false);
-  };
-
-  React.useEffect(() => {
-    return () => {
-      clearTimeout(hoverTimeout);
-    };
-  }, []);
 
   return (
     <div
@@ -391,8 +368,6 @@ function Carousel(props) {
               key={i}
               className={`item`}
               id={`movie_${IDkey}_${e.id}`}
-              onMouseOver={() => handleMouseOver(e.id)}
-              onMouseOut={handleMouseOut}
               style={styleGrid}>
               {children || (
                 <Fragment>
@@ -423,18 +398,19 @@ function Carousel(props) {
                           <Images
                             data={e}
                             index={i}
-                            isPlay={isHovered === e.id && showVideo}
+                            isPlay={
+                              expanse.active && expanse.index === i && isShow
+                            }
                           />
 
                           <div className="detail-movie">
                             <div className="beriers">
                               <ul>
                                 <li>
-                                  <span className="play">
-                                    <Play
-                                      onClick={() => onPlay(e.id)}
-                                      fill="#fff"
-                                    />
+                                  <span
+                                    onClick={() => onPlay(e.id)}
+                                    className="play">
+                                    <Play fill="#fff" />
                                   </span>
                                   <span>
                                     <Plus fill="#fff" />
