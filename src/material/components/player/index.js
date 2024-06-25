@@ -6,10 +6,10 @@ import CustomPlayer from "./controller";
 import "./_index.scss";
 
 function PlayerMovies(props) {
-  const { show = false, data } = props;
+  const { show = false, data, onHandle } = props;
   return show ? (
     <div className="wideo">
-      <CustomPlayer />
+      <CustomPlayer onClose={() => onHandle(false)} />
     </div>
   ) : null;
 }

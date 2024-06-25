@@ -12,17 +12,16 @@ import {
   BsVolumeDownFill,
   BsFillVolumeMuteFill,
 } from "react-icons/bs";
-import { IoIosArrowRoundBack } from "react-icons/io";
 import { IoMdPlay } from "react-icons/io";
 import { IoArrowBack } from "react-icons/io5";
 
 import { RiFullscreenLine } from "react-icons/ri";
-import { TfiCommentAlt } from "react-icons/tfi";
 import { TbBoxMultiple, TbBoxModel2Off } from "react-icons/tb";
 
 const init =
   "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4";
-const CustomPlayer = () => {
+const CustomPlayer = (props) => {
+  const { onClose } = props;
   const [url, setUrl] = useState(init);
   const [pip, setPip] = useState(false);
   const [playing, setPlaying] = useState(false);
@@ -149,7 +148,7 @@ const CustomPlayer = () => {
     <div className="player-control">
       <section className="section">
         <div className="head-player">
-          <button className="ico">
+          <button onClose={onClose} className="ico">
             <IoArrowBack />
           </button>
         </div>

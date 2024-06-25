@@ -95,7 +95,10 @@ function Dashboard(props) {
 
   return (
     <Fragment>
-      <PlayerMovies {...modal} />
+      <PlayerMovies
+        onHandle={(e) => setmodal({ ...modal, show: e })}
+        {...modal}
+      />
       <div>
         <Onemotion />
         {configCarousel.map((e, i) => (
