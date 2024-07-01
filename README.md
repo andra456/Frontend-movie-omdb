@@ -7,8 +7,6 @@ This is a frontend application for searching and displaying movie information us
 - [Usage](#usage)
 - [Features](#features)
 - [Technologies](#technologies)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Installation
 
@@ -37,7 +35,8 @@ This is a frontend application for searching and displaying movie information us
 - Search for movies by title
 - Display detailed information about movies
 - Responsive design
-- Technologies
+
+## Technologies
 - React.js: JavaScript library for building user interfaces
 - Redux: State management
 - Axios: Promise-based HTTP client for making API requests
