@@ -25,7 +25,7 @@ This is a frontend application for searching and displaying movie information us
     npm install
     ```
 3. Usage
-> Start the development server:
+   Start the development server:
   ```bash
   Open your browser and navigate to http://localhost:3000.
   ```
