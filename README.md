@@ -1,4 +1,4 @@
-# Frontend Assessment (by stockbit)
+# Impersonate Netflix web 
 
 
 ### Installation
